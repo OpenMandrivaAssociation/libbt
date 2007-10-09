@@ -1,12 +1,13 @@
+%define develname %mklibname -d bt
 Name: libbt
-Version: 1.05
-Release: %mkrel 4
+Version: 1.06
+Release: %mkrel 1
 Summary: C-language Impementation of the BitTorrent core protocols
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 License: GPL
 Group: Development/C++
 URL: http://libbt.sourceforge.net/
-Source0: http://prdownloads.sourceforge.net/libbt/libbt-%{version}.tar.bz2
+Source0: http://prdownloads.sourceforge.net/libbt/libbt-%{version}.tar.gz
 Patch: libbt-1.05-header.patch
 BuildRequires: curl-devel
 
@@ -31,11 +32,14 @@ This contains the sample applications from LibBT, that currently run
 in between 2Mb and 3.5Mb of memory (RSS), depending on the number of
 peers that are attached.
 
-%package devel
+%package -n %develname
 Summary: C-language Impementation of the BitTorrent core protocols
 Group: Development/C
+%if %_lib != lib
+Obsoletes: libbt-devel
+%endif
 
-%description devel
+%description -n %develname
 LibBT is a C reimplementation of the BitTorrent core protocols.  Our goal for
 the project is to develop a low overhead library version of the protocols so
 that BitTorrent transfers can easily be built in to any existing application.
@@ -51,7 +55,7 @@ The sample applications included with LibBT currently run in between 2Mb and
 %configure2_5x
 %make
 
-%install 
+%install
 [ "$RPM_BUILD_ROOT" != "/" ] && [ -d $RPM_BUILD_ROOT ] && rm -rf $RPM_BUILD_ROOT;
 %{__install} -Dd -m 0755                     \
     $RPM_BUILD_ROOT%{_bindir}/               \
@@ -88,7 +92,7 @@ mv %buildroot%_mandir/man1/btcheck.1 %buildroot%_mandir/man1/bt-check.1
 %{_bindir}/bt*
 %{_mandir}/man1/bt*
 
-%files devel
+%files -n %develname
 %defattr(-,root,root)
 %doc docs/*.txt
 %{_libdir}/%{name}.a
