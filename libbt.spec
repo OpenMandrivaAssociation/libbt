@@ -1,14 +1,14 @@
 %define develname %mklibname -d bt
 Name: libbt
 Version: 1.06
-Release: %mkrel 3
+Release: %mkrel 2
 Summary: C-language Impementation of the BitTorrent core protocols
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
-License: GPL
+License: GPL+ and LGPL+
 Group: Development/C++
 URL: http://libbt.sourceforge.net/
 Source0: http://prdownloads.sourceforge.net/libbt/libbt-%{version}.tar.gz
-Patch: libbt-1.05-header.patch
+Patch: libbt-1.06-header.patch
 BuildRequires: curl-devel
 
 %description
