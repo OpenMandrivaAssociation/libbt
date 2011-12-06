@@ -1,7 +1,7 @@
 %define develname %mklibname -d bt
 Name: libbt
 Version: 1.06
-Release: %mkrel 6
+Release: %mkrel 7
 Summary: C-language Impementation of the BitTorrent core protocols
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 License: GPL+ and LGPL+
