@@ -8,7 +8,8 @@ License: GPL+ and LGPL+
 Group: Development/C++
 URL: http://libbt.sourceforge.net/
 Source0: http://prdownloads.sourceforge.net/libbt/libbt-%{version}.tar.gz
-Patch: libbt-1.06-header.patch
+Patch0: libbt-1.06-header.patch
+Patch1: libbt-1.06-fix-linking.patch
 BuildRequires: curl-devel
 
 %description
@@ -49,7 +50,7 @@ The sample applications included with LibBT currently run in between 2Mb and
 
 %prep
 %setup -q
-%patch -p1
+%apply_patches
 
 %build
 %configure2_5x
