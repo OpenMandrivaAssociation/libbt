@@ -1,0 +1,11 @@
+--- libbt-1.06/src/Makefile.in.linking	2011-12-06 12:29:19.228524930 +0100
++++ libbt-1.06/src/Makefile.in	2011-12-06 12:29:20.578526201 +0100
+@@ -30,7 +30,7 @@ OBJS:= ${SRCS:.c=.o}
+ CPPFLAGS:=@CPPFLAGS@
+ CFLAGS:=-g -Wall -I../include -I$(top_srcdir)/include
+ 
+-LIBS:=@LIBS@ `curl-config --libs` -lm
++LIBS:=@LIBS@ `curl-config --libs` -lm -lcrypto
+ LDFLAGS:=-g -L. @LDFLAGS@
+ VERSION=1.06
+ MAKEDEPEND=@MAKEDEPEND@

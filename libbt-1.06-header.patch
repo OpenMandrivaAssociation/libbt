@@ -1,0 +1,32 @@
+--- libbt-1.05/src/btlist.c~	2005-12-10 00:50:12.000000000 +0100
++++ libbt-1.05/src/btlist.c	2005-12-11 23:56:45.000000000 +0100
+@@ -13,6 +13,7 @@
+ 
+ #include "config.h"
+ 
++#include <sys/types.h>
+ #include <openssl/sha.h>
+ #include <stdlib.h>
+ #include <string.h>
+diff -p -up libbt-1.06/src/peer.c~ libbt-1.06/src/peer.c
+--- libbt-1.06/src/peer.c~	2007-05-29 23:10:47.000000000 +0200
++++ libbt-1.06/src/peer.c	2008-10-10 09:49:54.000000000 +0200
+@@ -35,6 +35,7 @@
+ #include <time.h>
+ #include <poll.h>
+ #include <assert.h>
++#include <limits.h>
+ 
+ #include "bterror.h"
+ #include "btmessage.h"
+diff -p -up libbt-1.06/src/udpproto.c~ libbt-1.06/src/udpproto.c
+--- libbt-1.06/src/udpproto.c~	2007-05-29 23:10:48.000000000 +0200
++++ libbt-1.06/src/udpproto.c	2008-10-10 09:50:13.000000000 +0200
+@@ -4,6 +4,7 @@
+ #include <string.h>
+ #include <stdlib.h>
+ #include <unistd.h>
++#include <limits.h>
+ 
+ #include <arpa/inet.h>
+ 
