@@ -101,3 +101,72 @@ mv %buildroot%_mandir/man1/btcheck.1 %buildroot%_mandir/man1/bt-check.1
 %{_includedir}/%{name}/*
 
 
+
+
+%changelog
+* Tue Dec 06 2011 GÃ¶tz Waschk <waschk@mandriva.org> 1.06-7mdv2012.0
++ Revision: 738262
+- fix linking
+- yearly rebuild
+
+* Sun Dec 05 2010 Oden Eriksson <oeriksson@mandriva.com> 1.06-6mdv2011.0
++ Revision: 609734
+- rebuild
+
+* Wed Apr 21 2010 Funda Wang <fwang@mandriva.org> 1.06-5mdv2010.1
++ Revision: 537320
+- rebuild
+
+* Thu Oct 08 2009 Tomasz Pawel Gajc <tpg@mandriva.org> 1.06-4mdv2010.0
++ Revision: 455875
+- rebuild for new curl SSL backend
+
+* Fri Sep 11 2009 Thierry Vignaud <tv@mandriva.org> 1.06-3mdv2010.0
++ Revision: 438517
+- rebuild
+
+* Sat Oct 11 2008 GÃ¶tz Waschk <waschk@mandriva.org> 1.06-2mdv2009.1
++ Revision: 291902
+- update patch for gcc 4.3
+- update license
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+    - kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Tue Oct 09 2007 GÃ¶tz Waschk <waschk@mandriva.org> 1.06-1mdv2008.1
++ Revision: 96155
+- new version
+- new devel name
+
+
+* Fri Jan 05 2007 GÃ¶tz Waschk <waschk@mandriva.org> 1.05-4mdv2007.0
++ Revision: 104423
+- Import libbt
+
+* Fri Jan 05 2007 GÃ¶tz Waschk <waschk@mandriva.org> 1.05-4mdv2007.1
+- Rebuild
+
+* Fri Jul 21 2006 GÃ¶tz Waschk <waschk@mandriva.org> 1.05-1mdv2007.0
+- Rebuild
+
+* Mon Apr 10 2006 Götz Waschk <waschk@mandriva.org> 1.05-2mdk
+- rename btcheck as there's a conflict with perl-Text-BibTeX
+
+* Sun Dec 11 2005 Götz Waschk <waschk@mandriva.org> 1.05-1mdk
+- build patch
+- New release 1.05
+- use mkrel
+
+* Thu Apr 28 2005 Götz Waschk <waschk@mandriva.org> 1.04-1mdk
+- new version
+
+* Sun Feb 20 2005 Götz Waschk <waschk@linux-mandrake.com> 1.03-1mdk
+- initial mdk package
+
+* Sat Dec 18 2004 - darix@irssi.org
+- initial package
+
