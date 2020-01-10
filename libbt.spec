@@ -50,7 +50,7 @@ The sample applications included with LibBT currently run in between 2Mb and
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %build
 %configure2_5x
