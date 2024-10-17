@@ -6,7 +6,7 @@ Summary: C-language Impementation of the BitTorrent core protocols
 BuildRoot: %{_tmppath}/%{name}-%{version}-build
 License: GPL+ and LGPL+
 Group: Development/C++
-URL: http://libbt.sourceforge.net/
+URL: https://libbt.sourceforge.net/
 Source0: http://prdownloads.sourceforge.net/libbt/libbt-%{version}.tar.gz
 Patch0: libbt-1.06-header.patch
 Patch1: libbt-1.06-fix-linking.patch
