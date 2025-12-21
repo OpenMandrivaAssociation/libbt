@@ -10,6 +10,11 @@ URL: https://libbt.sourceforge.net/
 Source0: http://prdownloads.sourceforge.net/libbt/libbt-%{version}.tar.gz
 Patch0: libbt-1.06-header.patch
 Patch1: libbt-1.06-fix-linking.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: curl-devel
 
 %description
